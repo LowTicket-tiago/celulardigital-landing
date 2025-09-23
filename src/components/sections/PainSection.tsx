@@ -1,4 +1,5 @@
 import { AlertTriangle, Smartphone, Clock, DollarSign } from "lucide-react";
+import sectionBg from "@/assets/section-bg.jpg";
 
 export const PainSection = () => {
   const pains = [
@@ -25,7 +26,14 @@ export const PainSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-section-bg">
+    <section 
+      className="py-20 bg-section-bg relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(${sectionBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6">

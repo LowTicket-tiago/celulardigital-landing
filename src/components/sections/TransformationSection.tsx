@@ -1,4 +1,5 @@
 import { ArrowRight, X, CheckCircle } from "lucide-react";
+import transformationBg from "@/assets/transformation-bg.jpg";
 
 export const TransformationSection = () => {
   const beforeAfter = [
@@ -25,7 +26,14 @@ export const TransformationSection = () => {
   ];
 
   return (
-    <section className="py-20 bg-section-bg">
+    <section 
+      className="py-20 bg-section-bg relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.9)), url(${transformationBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6">

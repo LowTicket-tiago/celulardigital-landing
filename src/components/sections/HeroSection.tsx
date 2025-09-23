@@ -1,8 +1,17 @@
 import { CTAButton } from "@/components/CTAButton";
+import heroBg from "@/assets/hero-bg.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="min-h-screen bg-background flex items-center justify-center px-4 py-20">
+    <section 
+      className="min-h-screen bg-background flex items-center justify-center px-4 py-20 relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.8)), url(${heroBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundAttachment: 'fixed'
+      }}
+    >
       <div className="container mx-auto text-center max-w-4xl">
         <div className="space-y-8">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-neon text-glow leading-tight">

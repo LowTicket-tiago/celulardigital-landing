@@ -1,9 +1,17 @@
 import { Clock, TrendingUp, AlertTriangle } from "lucide-react";
 import { CTAButton } from "@/components/CTAButton";
+import sectionBg from "@/assets/section-bg.jpg";
 
 export const FinalSection = () => {
   return (
-    <section className="py-20 bg-section-bg">
+    <section 
+      className="py-20 bg-section-bg relative overflow-hidden"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.95)), url(${sectionBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center'
+      }}
+    >
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           {/* Urgência */}
