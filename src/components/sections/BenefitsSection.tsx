@@ -38,39 +38,39 @@ export const BenefitsSection = () => {
   return (
     <section className="py-20 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-5xl font-black text-foreground mb-6">
+        <div className="text-center mb-12 sm:mb-16 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-black text-foreground mb-4 sm:mb-6 leading-tight">
             O que você vai <span className="text-neon text-glow">APRENDER</span> neste eBook
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
             Conhecimento testado e aprovado por <strong className="text-neon">4 anos de experiência</strong> prática
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+        <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-6xl mx-auto mb-12 sm:mb-16 px-4">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-card p-8 rounded-lg border neon-border hover:neon-glow transition-smooth text-center">
-              <div className="flex justify-center mb-6">
+            <div key={index} className="bg-card p-6 sm:p-8 rounded-lg border neon-border hover:neon-glow transition-smooth text-center">
+              <div className="flex justify-center mb-4 sm:mb-6">
                 {benefit.icon}
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-4">
+              <h3 className="text-lg sm:text-xl font-bold text-foreground mb-3 sm:mb-4 leading-tight">
                 {benefit.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-sm sm:text-base text-muted-foreground leading-relaxed">
                 {benefit.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center space-y-6">
-          <div className="flex items-center justify-center space-x-2 text-neon text-xl">
-            <CheckCircle className="w-6 h-6" />
+        <div className="text-center space-y-6 px-4">
+          <div className="flex items-center justify-center space-x-2 text-neon text-lg sm:text-xl">
+            <CheckCircle className="w-5 h-5 sm:w-6 sm:h-6" />
             <span className="font-bold">Conteúdo 100% prático e aplicável</span>
           </div>
           
-          <CTAButton size="xl">
-            📘 Quero o eBook agora por R$ 67,00
+          <CTAButton size="xl" className="w-full sm:w-auto">
+            📘 Quero o eBook agora por R$ 47,00
           </CTAButton>
         </div>
       </div>
