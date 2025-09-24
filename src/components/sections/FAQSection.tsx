@@ -74,7 +74,7 @@ export const FAQSection = () => {
           </p>
           
           <CTAButton size="xl">
-            📘 Quero o eBook agora por R$ 67,00
+            📘 Quero o eBook agora por R$ 47,00
           </CTAButton>
         </div>
       </div>
