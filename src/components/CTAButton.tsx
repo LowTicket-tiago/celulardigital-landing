@@ -29,7 +29,7 @@ export const CTAButton = ({ children, className, size = "lg", onClick }: CTAButt
       className={cn(
         "gradient-neon text-black font-bold neon-glow transition-bounce hover:scale-105",
         "shadow-lg hover:shadow-xl rounded-lg min-h-[48px] touch-manipulation",
-        "active:scale-95 transition-all duration-200",
+        "active:scale-95 transition-all duration-200 js-cta-buy",
         sizeClasses[size],
         className
       )}

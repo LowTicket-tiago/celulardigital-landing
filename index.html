@@ -23,6 +23,42 @@
 
       fbq('init', '2160852107673996');   // Pixel
       fbq('track', 'PageView');          // Evento padrão
+      
+      // ViewContent event
+      fbq('track', 'ViewContent', {
+        content_name: 'Ebook Físico vs Virtual',
+        content_category: 'Ebooks',
+        content_ids: ['ebook-fisico-virtual'],
+        content_type: 'product',
+        value: 47.00,
+        currency: 'BRL'
+      });
+    </script>
+
+    <!-- InitiateCheckout Event -->
+    <script>
+      (function () {
+        function fireInitiateCheckout() {
+          if (window.__icFired) return;
+          window.__icFired = true;
+          setTimeout(function(){ window.__icFired = false; }, 1500);
+
+          fbq('track', 'InitiateCheckout', {
+            content_name: 'Ebook Físico vs Virtual',
+            content_category: 'Ebooks',
+            content_ids: ['ebook-fisico-virtual'],
+            content_type: 'product',
+            value: 47.00,
+            currency: 'BRL'
+          });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('a.js-cta-buy, button.js-cta-buy').forEach(function(el){
+            el.addEventListener('click', fireInitiateCheckout);
+          });
+        });
+      })();
     </script>
     <!-- End Meta Pixel Code -->
 
